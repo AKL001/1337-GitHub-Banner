@@ -69,7 +69,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
 }
 
 .info {
