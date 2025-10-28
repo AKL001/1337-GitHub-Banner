@@ -53,11 +53,27 @@ class Api42Client {
   }
 
   async getUserData(username) {
+    // Validate username to prevent request forgery
+    if (!username || typeof username !== 'string') {
+      throw new Error('Invalid username');
+    }
+    
+    // Sanitize username - only allow alphanumeric characters, hyphens, and underscores
+    const sanitizedUsername = username.replace(/[^a-zA-Z0-9\-_]/g, '');
+    
+    if (sanitizedUsername !== username || sanitizedUsername.length === 0) {
+      throw new Error('Username contains invalid characters');
+    }
+    
+    if (sanitizedUsername.length > 50) {
+      throw new Error('Username too long');
+    }
+    
     try {
       const token = await this.getAccessToken();
       
       return await this.rateLimitedRequest(async () => {
-        const response = await axios.get(`${this.baseURL}/v2/users/${username}`, {
+        const response = await axios.get(`${this.baseURL}/v2/users/${sanitizedUsername}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
