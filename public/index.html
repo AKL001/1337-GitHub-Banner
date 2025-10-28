@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1337 GitHub Banner Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="glow-text">⚔️ 1337 GitHub Banner Generator ⚔️</h1>
+            <p class="subtitle">Create an awesome animated banner for your GitHub profile</p>
+        </header>
+
+        <section class="generator-section">
+            <div class="input-container">
+                <label for="username">Enter your 1337 username:</label>
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="e.g., aklabib" autocomplete="off">
+                    <button id="generateBtn" class="btn-primary">Generate Banner</button>
+                </div>
+                <div id="error-message" class="error-message"></div>
+                <div id="loading" class="loading"></div>
+            </div>
+        </section>
+
+        <section id="preview-section" class="preview-section hidden">
+            <h2>🎨 Banner Preview</h2>
+            <div class="banner-preview">
+                <img id="bannerPreview" src="" alt="Banner Preview">
+            </div>
+
+            <div class="user-info" id="userInfo"></div>
+
+            <div class="code-section">
+                <h3>📋 Copy the code below to your GitHub README:</h3>
+                
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Markdown</span>
+                        <button class="copy-btn" data-target="markdownCode">
+                            <span class="copy-text">Copy</span>
+                            <span class="copied-text">Copied!</span>
+                        </button>
+                    </div>
+                    <pre><code id="markdownCode"></code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" data-target="htmlCode">
+                            <span class="copy-text">Copy</span>
+                            <span class="copied-text">Copied!</span>
+                        </button>
+                    </div>
+                    <pre><code id="htmlCode"></code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>📖 How to Use</h2>
+            <ol>
+                <li>Enter your 1337 username in the input field above</li>
+                <li>Click "Generate Banner" to create your personalized banner</li>
+                <li>Preview your banner and check if everything looks good</li>
+                <li>Copy the generated code (Markdown or HTML)</li>
+                <li>Paste it into your GitHub profile README.md file</li>
+                <li>Commit and push - your banner will now display on your profile!</li>
+            </ol>
+        </section>
+
+        <section class="features">
+            <h2>✨ Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Animated Design</h3>
+                    <p>Eye-catching animations inspired by anime fighting games</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Live Stats</h3>
+                    <p>Shows your current level, campus, coalition, and more</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Auto-Update</h3>
+                    <p>Banner updates automatically with your latest progress</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Custom Colors</h3>
+                    <p>Uses your coalition colors for personalization</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for the 1337 community</p>
+            <p class="small-text">Powered by 42 API</p>
+        </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
